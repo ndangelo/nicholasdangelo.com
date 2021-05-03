@@ -1,11 +1,10 @@
 /* GitHub Theme */
 .prettyprint {
   background: #fff;
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco,
-    Consolas, monospace;
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
   font-size: 1.2rem;
   padding: 2.5rem 3rem;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; 
 }
 
 .pln {
@@ -93,9 +92,7 @@
     color: #004444;
   }
 
-  .pun,
-  .opn,
-  .clo {
+  .pun, .opn, .clo {
     color: #444400;
   }
 
@@ -148,5 +145,5 @@ li.L5, li.L6, li.L7, li.L8
 { list-style-type: decimal !important }*/
 
 .prettyprint li {
-  margin-bottom: 0.3rem;
+  margin-bottom: .3rem;
 }

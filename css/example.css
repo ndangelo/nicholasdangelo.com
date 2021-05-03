@@ -1,6 +1,5 @@
 /* line 1, ../sass/example.scss */
-.header,
-.section {
+.header, .section {
   display: table;
   width: 100%;
   text-align: center;
@@ -8,16 +7,14 @@
   box-sizing: border-box;
 }
 /* line 7, ../sass/example.scss */
-.header > div,
-.section > div {
+.header > div, .section > div {
   display: table-cell;
   vertical-align: middle;
 }
 
 /* line 13, ../sass/example.scss */
-html,
-body {
-  font-family: Montserrat, sans-serif;
+html, body {
+  font-family: Montserrat,sans-serif;
 }
 
 /* line 17, ../sass/example.scss */
@@ -43,37 +40,37 @@ li {
 }
 
 /* line 40, ../sass/example.scss */
-.section:nth-child(6n + 1) {
+.section:nth-child(6n+1) {
   height: 700px;
-  background-color: #ff708f;
+  background-color: #FF708F;
 }
 
 /* line 45, ../sass/example.scss */
-.section:nth-child(6n + 2) {
+.section:nth-child(6n+2) {
   height: 1000px;
-  background-color: #e89d5d;
+  background-color: #E89D5D;
 }
 
 /* line 50, ../sass/example.scss */
-.section:nth-child(6n + 3) {
+.section:nth-child(6n+3) {
   height: 500px;
-  background-color: #ffe33e;
+  background-color: #FFE33E;
 }
 
 /* line 55, ../sass/example.scss */
-.section:nth-child(6n + 4) {
+.section:nth-child(6n+4) {
   height: 900px;
-  background-color: #7ae856;
+  background-color: #7AE856;
 }
 
 /* line 60, ../sass/example.scss */
-.section:nth-child(6n + 5) {
+.section:nth-child(6n+5) {
   height: 1500px;
-  background-color: #7affe6;
+  background-color: #7AFFE6;
 }
 
 /* line 65, ../sass/example.scss */
 .section:nth-child(6n) {
   height: 400px;
-  background-color: #6e74f5;
+  background-color: #6E74F5;
 }
