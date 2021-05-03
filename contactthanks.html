@@ -1,99 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-  <!-- Basic Page Needs
+  <head>
+    <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Nicholas D'Angelo</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8" />
+    <title>Nicholas D'Angelo</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- FONT
+    <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!--<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>-->
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,300,700' rel='stylesheet' type='text/css'>  <!-- CSS
+    <!--<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/custom.css">
-  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/github-prettify-theme.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Varela+Round"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/github-prettify-theme.css" />
 
-  <!-- Scripts
+    <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-  <script src="js/site.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="js/site.js"></script>
 
-  		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.poptrox.min.js"></script>
 
-<script>
-  $(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    <script>
+      $(function () {
+        $("a[href*=#]:not([href=#])").click(function () {
+          if (
+            location.pathname.replace(/^\//, "") ==
+              this.pathname.replace(/^\//, "") &&
+            location.hostname == this.hostname
+          ) {
+            var target = $(this.hash);
+            target = target.length
+              ? target
+              : $("[name=" + this.hash.slice(1) + "]");
+            if (target.length) {
+              $("html,body").animate(
+                {
+                  scrollTop: target.offset().top,
+                },
+                1000
+              );
+              return false;
+            }
+          }
+        });
+      });
+    </script>
 
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
-    });
-  });
-  </script>
+    <script>
+      $(function () {
+        var foo = $("#gallery");
+        foo.poptrox({
+          usePopupCaption: true,
+        });
+      });
+    </script>
 
-
-		<script>
-			$(function() {
-				
-				var foo = $('#gallery');
-				foo.poptrox({
-					usePopupCaption: true
-				});
-			
-			});
-		</script>
-
-
-		
-
-  <!-- Favicon
+    <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-</head>
-<body class="code-snippets-visible" style="margin-width:auto; margin-height:auto;">
-
-  <!-- Primary Page Layout
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body
+    class="code-snippets-visible"
+    style="margin-width: auto; margin-height: auto"
+  >
+    <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container" align="center"><br /><br /><br /><br /><br />
-  		
-  				<h3>Thank You!</h3>
-		
+    <div class="container" align="center">
+      <br /><br /><br /><br /><br />
 
-		<p>Your message has been sent!</p>
+      <h3>Thank You!</h3>
 
-    <div><img src="https://s3.amazonaws.com/nicholasdangelo.com/images/picture_nd.jpg" style="align:center;" height="250" width="250"></div>
-		
-  		<br /><br />
+      <p>Your message has been sent!</p>
 
-</div>
+      <div>
+        <img
+          src="https://s3.amazonaws.com/nicholasdangelo.com/images/picture_nd.jpg"
+          style="align: center"
+          height="250"
+          width="250"
+        />
+      </div>
 
-
-
-
-</body>
-
+      <br /><br />
+    </div>
+  </body>
 </html>

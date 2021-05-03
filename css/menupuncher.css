@@ -14,10 +14,11 @@ Description: Jenal Design
   transition: all 0.25s ease-in-out;
 }
 
-html, body {
+html,
+body {
   margin: 0px;
   padding: 0px;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 #container {
@@ -38,7 +39,7 @@ html, body {
   width: 35px;
   height: 2px;
   display: block;
-  background: #FFF;
+  background: #fff;
   margin: 0 0 8px 0;
 }
 .pusher span:last-child {
