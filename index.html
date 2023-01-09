@@ -1,218 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" >
 <head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-7610167-6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-7610167-6');
-</script>
-
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <title>Nicholas D'Angelo</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- partial:index.partial.html -->
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!--<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>-->
-  <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,300,700' rel='stylesheet' type='text/css'>
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
- <!-- <link rel="stylesheet" href="css/main.css" />-->
-  <!--<link rel="stylesheet" href="css/normalize.css">-->
-<link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/custom.css">
- <!-- <link rel="stylesheet" href="css/github-prettify-theme.css">-->
-<!--  <link rel="stylesheet" href="vendor/highlight.css">-->
-  <link rel="stylesheet" href="vendor/yui-cssreset.css">
+  <script src="https://kit.fontawesome.com/668bacc72e.js" crossorigin="anonymous"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+	<style>
+	body {
+		margin:0; 
+		padding:0; 
+		background:#fff;
+		text-align:center; 
+    
+    /* center div in IE */
+		for ie div centering, reset in wrapper  */
+	}
+	#wrapper {
+		width:600px; 
+		margin:0 auto; 
+		border-radius:0 0 5px 5px;
+		-moz-border-radius:0 0 5px 5px;
+		-webkit-border-radius: 0 0 5px 5px;
+		background:#fff; 
+		border:1px solid #ccc; 
+		padding:25px; 
+		border-top:none; 
+		box-shadow:0 0 5px #ccc;
+		-moz-box-shadow:0 0 5px #ccc;
+		-webkit-box-shadow:0 0 5px #ccc;
+		text-align:left;
+	}
+	#lightbox {
+		    /* keeps the lightbox window in the current viewport. position:fixed makes our overlay appear correctly in the current viewport, no matter the user’s position on screen (top or bottom of the page). This is where using the right DOCTYPE comes in handy. If IE runs in quirks mode due to the wrong DOCTYPE (or none at all), then our overlay won’t appear correctly.  */
+		    position:fixed; /* keeps the lightbox window in the current viewport */
+			top:0; 
+			left:0; 
+		    /* This makes our #lightbox div, which acts as the black overlay, cover the entire viewport no matter the end user’s screen resolution */
+		    width:100%; 
+			height:100%; 
+			background: rgba(0,0,0,.7); 
+			text-align:center;
+     z-index: 9999;
+			}
+		/* we will add some text in the lightbox overlay stating they can click anywhere to have the lightbox window disappear */
+		#lightbox p { 
+		    text-align:right;
+		    color:#fff;
+		    margin-right:20px;
+		    font-size:12px;
+			}
+		#lightbox img {
+		    box-shadow:0 0 25px #111;
+		    -webkit-box-shadow:0 0 25px #111;
+		    -moz-box-shadow:0 0 25px #111;
+		    /* Adding a max-width will shrink any high-resolution images we might be linking to. This helps to ensure all images fit into the viewport. */
+		    max-width:940px;
+			}
+	</style>
+ 
   
+</head>
 
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1454226/site.js"></script>
-  <script src="https://s3.amazonaws.com/nicholasdangelo/vendor/modernizr.js"></script>
+<body>
 
-  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1454226/jquery.poptrox.min.js"></script>
+<div class="top hr-main">
 
-  <script>
-    $(function() {
-      $("a[href*=#]:not([href=#])").click(function() {
-        if (
-          location.pathname.replace(/^\//, "") ==
-            this.pathname.replace(/^\//, "") &&
-          location.hostname == this.hostname
-        ) {
-          var target = $(this.hash);
-          target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-          if (target.length) {
-            $("html,body").animate(
-              {
-                scrollTop: target.offset().top
-              },
-              1000
-            );
-            return false;
-          }
-        }
-      });
-    });
-  </script>
-
-
-  <script>
-    $(function() {
-      var foo = $("#gallery");
-      foo.poptrox({
-        usePopupCaption: true
-      });
-    });
-  </script>
-
-
-  <style>
-    .myIframe {
-      position: relative;
-      padding-bottom: 65.25%;
-      padding-top: 30px;
-      height: 0;
-      overflow: auto;
-      -webkit-overflow-scrolling: touch; //<<--- THIS IS THE KEY
-      border: solid black 1px;
-    }
-    .myIframe iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+  <nav class="flex-nav">
+    <br>   
+ <span class="toplogo1">nicholas</span>&nbsp;&nbsp;
+      
+     <span class="toplogo2">d'angelo</span>
     
-  .label {
-    text-transform: none;
-  line-height: normal;
+    <a href="#" class="toggleNav"><i class="fa fa-bars"></i> Menu</a>
+    <ul>
+      <li><a href="#home" class="scrollLink" >Home</a></li>
+            <li><a href="#about" class="scrollLink" title="Contact">About</a></li>
+            <li><a href="#resume" class="scrollLink" title="#resume">resume</a></li>
+                    <li><a href="#contact" class="scrollLink" title="Contact">Contact</a></li>
+      <li><a href="#bio" class="scrollLink" title="About">Bio</a></li>
+
+      <li><a  href="#press" class="scrollLink" title="Services">Press</a></li>
+
+
+      <li class="social">
+        <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+      </li>
+      <li class="social">
+        <a href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a>
+      </li>
+      <li class="social">
+        <a href="#" title="GitHub"><i class="fa fa-github"></i></a>
+      </li>
+      <li class="social">
+        <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+      </li>
+    </ul>
+  </nav>
   
-}
-    
-    .contact {
-      margin: 0 auto;
-      width: 319px;
-      height:500px;
-    }
-    
-    .work_height {
-      height: 262px;
-    }
-    
-    /* Remove margins and padding from the list, and add a black background color */
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #fff;
-}
-
-/* Float the list items side by side */
-ul.topnav li {float:left;}
-
-/* Style the links inside the list items */
-ul.topnav li a {
-  display: inline-block;
-  text-align:center;
-  padding: 12px 16px;
-  text-decoration: none;
-  transition: 0.3s;
-  font-size: 17px;
-}
-    
-
-    .titletext }
-      text-transform: none; line-height: 1.5em; margin-bottom: 10px;
-    }
-    
+  </div> 
+  <span id="home"></span>
+<br /><br />
+<div class="wrapper">
+           <div style="margin: auto;">
 
 
-/* Change background color of links on hover */
-ul.topnav li a:hover {background-color: #fff;}
-
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
-ul.topnav li.icon {display: none;  float:right;}
-
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:680px) {
-  ul.topnav li:not(:first-child){display:none;}
-  ul.topnav li.icon {
-    float:right;
-    display: inline-block;
-     z-index: 999999;
-  }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-@media screen and (max-width:680px) {
-  ul.topnav.responsive {position:relative;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 999999;
-  }
-  
-  ul.topnav.responsive li {
-    float:none;
-    display:inline;
-     z-index: 999999;
-  }
-  
-  ul.topnav.responsive li a {
-    display:block;
-    text-align:left;
-     z-index: 999999;
-  }
-}
-
-/*img {
--webkit-user-drag: none;
--khtml-user-drag: none;
--moz-user-drag: none;
--o-user-drag: none;
-user-drag: none;
-}*/
-  </style>
-
-  <script type="text/javascript">
-function click (e) {
-  if (!e)
-    e = window.event;
-  if ((e.type && e.type == "contextmenu") || (e.button && e.button == 2) || (e.which && e.which == 3)) {
-    if (window.opera)
-      window.alert("");
-    return false;
-  }
-}
-if (document.layers)
-  document.captureEvents(Event.MOUSEDOWN);
-document.onmousedown = click;
-document.oncontextmenu = click;
-</script>
 
   
-  <script>
+  <!-- We used the class lightbox_trigger on every link that has an image we want to show in our lightbox. This becomes useful when we want to target those elements in the script we will write -->
+
+			
+  <section class="gallery">
+        <p style="text-align: center;">I create work where action, speed of movement, and thought dominate the subject of my artwork. I document dynamic performances using various techniques to create source material for much of my work. The completed work is composed of a narrative that depicts motion in two-dimensional images.</p>
+    <ul>
+      <li class="gallery-image">
+
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/looking_reaching_sm.png" class="lightbox_trigger"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/looking_reaching_sm.png"></a>
+        <span class="work-title"><i>Reaching</i>, 20" x 36" x 1", Digital Print</span>
+      </li>
+      <li class="gallery-image">
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/glance_sm.png" class="lightbox_trigger" alt="Test"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/glance_sm.png"></a>        <span class="work-title"><i>Glance</i>, 20" x 36" x 1", Digital Print</span>
+      </li>
+      <li class="gallery-image">
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/ghost_movement_sm.png" class="lightbox_trigger"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/ghost_movement_sm.png"></a>        <span class="work-title"><i>Ghost Movement</i>, 20" x 36" x 1", Digital Print</span>
+        
+      </li>
+      <li class="gallery-image">
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/breaking_apart_sm.png" class="lightbox_trigger"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/breaking_apart_sm.png"></a>        <span class="work-title"><i>Breaking Apart</i>, 20" x 36" x 1", Digital Print</span>
+      </li>
+      
+            <li class="gallery-image">
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_attack.png" class="lightbox_trigger"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_attack.png"></a>        <span class="work-title"><i>Attack</i>, 20" x 36" x 1", Digital Print</span>
+      </li>
+      
+      <li class="gallery-image">
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_rising.png" class="lightbox_trigger"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_rising.png"></a>        <span class="work-title"><i>Rising</i>, 8" x 8" x 1", Digital Print</span>
+      </li>
+      
+      <li class="gallery-image">
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Im_Here_Now_What.png" class="lightbox_trigger"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Im_Here_Now_What.png"></a>     <span class="work-title"><i>I'm here now. What?</i>, 8" x 8" x 1", Digital Print</span>
+      </li>
+      
+            <li class="gallery-image">
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Turning_Away_from_the_Unknown.png" class="lightbox_trigger"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Turning_Away_from_the_Unknown.png"></a>     <span class="work-title"><i>Turning Away from The Unknown</i>, 8" x 8" x 1", Digital Print</span>
+      </li>
+      
+            <li class="gallery-image">
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Why_are_You_Here.png" class="lightbox_trigger"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Why_are_You_Here.png"></a>     <span class="work-title"><i>Why are you Here</i>, 8" x 8" x 1", Digital Print</span>
+      </li>
+      
+            <li class="gallery-image">
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Whos_Behind_Me_Whose_in_Front_of_Me.png" class="lightbox_trigger"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Whos_Behind_Me_Whose_in_Front_of_Me.png"></a>     <span class="work-title"><i>Who's Behind me? Who's in Front of Me</i>, 8" x 8" x 1", Digital Print</span>
+      </li>
+      
+                  <li class="gallery-image">
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/ndangeo_Im_an_Afterthought.png" class="lightbox_trigger"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangeo_Im_an_Afterthought.png"></a>     <span class="work-title"><i>I'm an Afterthought</i>, 8" x 8" x 1", Digital Print</span>
+      </li>
+      
+                        <li class="gallery-image">
+				<a href="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_stages_of_worry.png" class="lightbox_trigger"><img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_stages_of_worry.png"></a>     <span class="work-title"><i>Stages of Worry</i>, 8" x 8" x 1", Digital Print</span>
+      </li>
+      
+      
+      
+      
+    </ul>
+  </section>
+             
+     
+
+
+  <section class="details">
+ <!--   <h>Sign up today for the latest updates!</h>
+    <form action="" class="signup">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Email Address">
+      <input type="submit" value="Sign Up">
+    </form>-->
+  </section>
+ <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -231,350 +204,111 @@ document.oncontextmenu = click;
 }
     
   </script>
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="https://nicholasdangelo/image/png" href="images/favicon.png">
-
-</head>
-
-<body class="code-snippets-visible" background="#FFFFFF">
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-
-    
-
-    <nav class="wrap nav_wrap">
-  
-        <br>
-        <div style="margin-top: 10px; display: flex; flex-direction: row; justify-content: center;"> <a href="#home"> <img src="https://s3.amazonaws.com/nicholasdangelo/images/nicholas_dangelo_logo.png" ></a><br />
-   
-          </div>
-
-     <div class="navbox">
-        <a name="#home">
-
-       <div class="navbox2"> <a class="topnav" href="#home" target="_blank">HOME</a></div>
-
-        <div class="navbox2"> <a class="topnav" href="#bio">BIO</a></div>
-
-          <div class="navbox2"> <a class="topnav" href="ndangelo_resume_2022.pdf" target="_blank">RESUME</a></div>
-
-        <div class="navbox2"> <a class="topnav" href="#press">PRESS</a></div>
-
-        <div class="navbox2"> <a class="topnav" href="#about">ABOUT</a></div>
-
-       <div class="navbox2">  <a class="topnav" href="#contact">CONTACT</a></div>
-
-
-        <br /><br />
-      </div>
-
-      <!-- <div style="border-bottom: 1px solid #eee; width:100%; margin-top: 25px; z-align:333;"></div>-->
-
-    </nav>
-
-
-    <!-- Grid -->
-      <br /> 
-    <a id="home"></a>
      
-    <div class="docs-section" id="grid gallery">
-      <br /> <br /> <br /><br />
-      <h6 class="docs-header">Portfolio</h6>
+              <section class="gallery">
+     
+    <div class="hr-standard"></div>
+ 
 
-
-      <div class="example-grid docs-example" id="gallery">
-        
-                       <div class="row box_2">
-
-          <div class="six columns fade" id="gallery" style="text-transform: none;">
-                        <a href="https://image-control-storage.s3.amazonaws.com/review_images/magenta_anguish.jpg"><img src="https://image-control-storage.s3.amazonaws.com/review_images/magenta_anguish.jpg" alt="" title="Nicholas D’Angelo, Blue Sky, 8”x10”, Oil on Canvas" /></a><p class="title">Nicholas D’Angelo, Anguish, 18”x24”, Digitally Manipulated Print</p>
-
-  
-
-          </div>
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://image-control-storage.s3.amazonaws.com/review_images/final_head_main_still_4.jpg"><img src="https://image-control-storage.s3.amazonaws.com/review_images/final_head_main_still_4.jpg" alt="" title="Nicholas D’Angelo, Horrible Night, 5”x7”, Oil on Board" /></a><p class="title">Nicholas D’Angelo, Untitled IV, 18”x24”, Digitally Manipulated Print</p>
-          </div>
-        </div>
-        
-               <div class="row box_2">
-
-          <div class="six columns fade" id="gallery" style="text-transform: none;">
-                        <a href="https://s3.amazonaws.com/nicholasdangelo/images/landscape_ndangelo.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/landscape_ndangelo.jpg" alt="" title="Nicholas D’Angelo, Blue Sky, 8”x10”, Oil on Canvas" /></a><p class="title">Nicholas D’Angelo, Landscape, 5”x7”, Oil on Board</p>
-
-  
-
-          </div>
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/ndangelo_landscape_storm.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/ndangelo_landscape_storm.jpg" alt="" title="Nicholas D’Angelo, Horrible Night, 5”x7”, Oil on Board" /></a><p class="title">Nicholas D’Angelo, Horrible Night, 5”x7”, Oil on Board</p>
-          </div>
-        </div>
-        
-        
-         <div class="row box_2">
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/ndangelo_untitled_I.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/ndangelo_untitled_I.jpg" alt="" title="Nicholas D’Angelo, The Blob Returns, 16”x12”, Oil on Canvas" /></a>
-            <p class="title">Nicholas D’Angelo, The Blob Returns, 16”x12”, Oil on Canvas</p>
-          </div>
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/ndangelo_landscape_II.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/ndangelo_landscape_II.jpg" alt="" title="Nicholas D’Angelo, Pink Escape, 12”x8”, Oil on Canvas" /></a> <p class="title">Nicholas D’Angelo, Pink Escape, 12”x8”, Oil on Canvas</p>
-
-          </div>
-        </div>
-
-
-                         <div class="row box_2">
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/green_background.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/green_background.jpg" alt="" title="Nicholas D’Angelo, Blue Sky, 8”x10”, Oil on Canvas" /></a>
-            <p class="title">Nicholas D’Angelo, Green Sky, 5"x7"</p>
-          </div>
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/blue_cloud.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/blue_cloud.jpg" alt="" title="Nicholas D’Angelo, Blue Horizon, 8”x10”, Oil on Canvas" /></a> <p class="title">Nicholas D’Angelo, Blue Horizon, 8”x10”, Oil on Canvas</p>
-
-          </div>
-        </div>
-
-
-                 <div class="row box_2">
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/blue_sky.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/blue_sky.jpg" alt="" title="Nicholas D’Angelo, Blue Sky, 16”x12”, Oil on Canvas" /></a>
-            <p class="title">Nicholas D’Angelo, Blue Sky, 5"x7"</p>
-          </div>
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/brown_sky.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/brown_sky.jpg" alt="" title="Untitled" /></a> <p class="title">Nicholas D’Angelo, Untitled, Oil on Canvas</p>
-
-          </div>
-        </div>
-
-
-        
-        <div class="row box_2">
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/child_frame_sm.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/child_frame_sm.jpg" alt="" title="Nicholas D’Angelo, Broken, 12”x12”, Mixed Media" /></a>
-<p class="title">Nicholas D’Angelo, Broken, 12”x12”, Mixed Media</p>
-          </div>
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/doris_study1.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/doris_study1.jpg" alt="" title="Nicholas D’Angelo, Study for a Portrait of Doris, 10”x10”, Mixed Media" /></a><p class="title">Nicholas D’Angelo, Study for a Portrait of Doris, 10”x10”, Mixed Media</p>
-          </div>
-        </div>
-
-
-        <div class="row box_2" id="gallery">
-
-          <div class="six columns fade" id="gallery">
-
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/nd_color_study3.jpeg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/nd_color_study3.jpeg" alt="" title="Nicholas D’Angelo, Study for a Portrait of the Artist – Color Study, 10”x10”, Mixed Media" /></a><p class="title">Nicholas D’Angelo, Study for a Portrait of the Artist – Color Study, 10”x10”, Mixed Media.</p>
-          </div>
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/letters_concetta_ndangelo.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/letters_concetta_ndangelo.jpg" alt="" title="Nicholas D’Angelo, Letter From Concetta, 18”x14”, Mixed Media" Description="#" /></a><p class="title">Nicholas D’Angelo, Letter From Concetta, 18”x14”, Mixed Media</p>
-          </div>
-
-        </div>
-
-
-        <div class="row box_2" id="gallery">
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/korea_nd.jpeg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/korea_nd.jpeg" alt="" title="Nicholas D’Angelo, Study for the Portrait of a Friend - Korea, 8”x8”, Mixed Media" /></a><p class="title">Nicholas D’Angelo, Study for the Portrait of a Friend - Korea, 8”x8”, Mixed Media</p>
-          </div>
-<!-- Bottom -->
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/marilyn_one.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/marilyn_one.jpg" alt="" title="Study for a Portrait of an Anonymous Family Member" /></a><p class="title">Nicholas D’Angelo, Study for a Portrait of an Anonymous Family Member, 8”x12”, Oil on Canvas</p>
-          </div>
-
-
-        </div>
-        <div class="row box_2" id="gallery">
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/concetta_111.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/concetta_111.jpg" alt="" title="Nicholas D’Angelo, Lost letter from Concetta, 10”x10”, Mixed Media" /></a><p class="title">Nicholas D’Angelo, Lost letter from Concetta, 10”x10”, Mixed Media</p>
-          </div>
-<!-- Bottom -->
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/dance_nd_study1.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/dance_nd_study1.jpg" alt="" title="Nicholas D’Angelo, Dance Cards, 7”x16”, Mixed Media" /></a><p class="title">Nicholas D’Angelo, Dance Cards, 7”x16”, Mixed Media</p>
-          </div>
-
-  </div>
-      
-        <div class="row box_2">
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/newark_riots_lg.png"><img src="https://s3.amazonaws.com/nicholasdangelo/images/newark_riots_lg.png" alt="" title="Nicholas D’Angelo, Newark Riots, 36”x24”, Mixed Media" /></a><p class="title">Nicholas D’Angelo, Newark Riots, 36”x24”, Mixed Media</p>
-          </div>
-
-
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/self_green_frame_sm.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/self_green_frame_sm.jpg" alt="" title="Nicholas D’Angelo, Self Portrait, 5”x5, Mixed Media" /></a><p class="title">Nicholas D’Angelo, Self Portrait, 8”x8", Mixed Media</p>
-          </div>
-  </div>
-
-    
-        <div class="row box_2" id="gallery">
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/rita_cropped.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/rita_cropped.jpg" alt="" title="A Study for a Portrait of my Aunt" /></a><p class="title">Nicholas D’Angelo, A Study for a Portrait of my Aunt, 14”x10”, Oil on Canvas</p>
-          </div>
-
-
-                      <div class="six columns fade" id="gallery">
-
-            
-              <a href="https://s3.amazonaws.com/nicholasdangelo/images/macbeth1.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/macbeth1.jpg" alt="" title="Nicholas D’Angelo, Macbeth, 12”x8”, Mixed Media" /></a><p class="title">Nicholas D’Angelo, Macbeth, 12”x8”, Mixed Media</p>
-            </div>
-        </div>
-
-     <div class="row box_2">
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/yellow_sm_22.jpeg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/yellow_sm_22.jpeg" alt="" title="Nicholas D’Angelo, Study for a Portrait of the Artist – Color Study II, 6”x6”, Oil on Canvas" /></a><p class="title">Nicholas D’Angelo, Study for a Portrait of the Artist – Color Study II, 6”x6”, Mixed Media</p>
-          </div>
-
-       
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/movies_phone_pic.jpeg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/movies_phone_pic.jpeg" alt="" title="Study for a Portrait of the Artist – Gone to the Movies" /></a><p class="title">Nicholas D’Angelo, Study for a Portrait of the Artist – Gone to the Movies, 4”x4” Mixed Media</p>
-          </div>
-  </div>
-        
-            <div class="row box_2">
-       <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/moving_small.jpeg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/moving_small.jpeg" alt="" title="Nicholas D’Angelo, Study for a Portrait of the Artist – Moving isn’t Fun, 4”x4”, Oil on Canvas" /></a><p class="title">Nicholas D’Angelo, Study for a Portrait of the Artist – Moving isn’t Fun, 4”x4”, Oil on Canvas</p>
-          </div>
-
-
-      
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/nd_color_study3.jpeg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/nd_color_study3.jpeg" alt="" title="Nicholas D’Angelo, Color Study - Yellow, 6”x6”, Oil on Canvas" /></a><p class="title">Nicholas D’Angelo, Color Study - Yellow, 6”x6”, Oil on Canvas</p>
-          </div>
-  </div>
-        
-        
-           <div class="row box_2">
-          <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/nicola_full1.jpeg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/nicola_full1.jpeg" alt="" title="Nicholas D’Angelo, Portrait of Nicola D’Angelo, 36”x24”, Mixed Media" /></a><p class="title">Nicholas D’Angelo, Portrait of Nicola D’Angelo, 36”x24”, Mixed Media</p>
-          </div>
-        
-
-           <div class="six columns fade" id="gallery">
-            <a href="https://s3.amazonaws.com/nicholasdangelo/images/german_folk1.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/german_folk1.jpg" alt="" title="Nicholas D’Angelo, German Folk Book Via Australian Library Sale, 18”x22”, Mixed Media" /></a><p class="title">Nicholas D’Angelo, German Folk Book Via Australian Library Sale, 18”x22”, Mixed Media</p>
-          </div>
-       
-  </div>
-        
-        
-          <div class="row box_2">
-            <div class="six columns fade" id="gallery">
-              <a href="https://s3.amazonaws.com/nicholasdangelo/images/letter_main1.jpeg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/letter_main1.jpeg" alt="" title="Nicholas D’Angelo, Study for a Self Portrait, Forgotten Project, 48”x36”, Mixed Media" /></a><p class="title">Nicholas D’Angelo, Study for a Self Portrait, Forgotten Project, 48”x36”, Mixed Media</p>
-            </div>
-
-            <div class="six columns fade" id="gallery">
-              <a href="https://s3.amazonaws.com/nicholasdangelo/images/macbeth1.jpg"><img src="https://s3.amazonaws.com/nicholasdangelo/images/macbeth1.jpg" alt="" title="Nicholas D’Angelo, Macbeth, 12”x8”, Mixed Media" /></a><p class="title">Nicholas D’Angelo, Macbeth, 12”x8”, Mixed Media</p>
-            </div>
-          </div>
-
-
-
-          <br/><br/>
-        
-
-
-        <a id="about"></a>
         <div>
-<br /><br /><br />
-          <div style="width: 100%; width: auto; text-align: center;" >
-          <img src="https://s3.amazonaws.com/nicholasdangelo/images/rotunda_family.jpg" alt="" title="Rotunda Family"/>
+   <br><br> 
+      
+         <span id="about"></span> 
+          <div style="width: 100%; text-align: center;" >
+            
+          <img src="https://s3.amazonaws.com/nicholasdangelo/images/rotunda_family.jpg" alt="" title="Rotunda Family" style="max-width: 800px;"/>
+            
         </div>
-<br />
-<br />
-           <div style="margin: auto; width: auto; font-size:16px;" >
-        <h6 class="docs-header" style="text-align: center;">About</h6>
+          
+        
 
-        <p style="text-align: center; font-size:16px;">I'm a Creative Director and Video/Performance artist based in West Orange, NJ. Please download my resume for contact info.</p>
+           <div style="margin: auto;">
+        <h6 class="about_title">About</h6>
+             
+          
+  <span id="resume"></span>  
+        <p style="text-align: center;">I'm a Creative Director and Video/Performance artist based in West Orange, NJ. Please download my resume for contact info.</p>
+           
 
-        <p style="text-align: center; font-size:16px;"><strong>Picture above:</strong> The Rotunta Family. My Grandmothers side of the family.
+        <p style="text-align: center;"><strong>Picture above:</strong> The Rotunta Family. My Grandmothers side of the family.
+          
+              
 
         </p>
- </div><br/><br/>
-      </div><br /><br />
-      <a id="resume"></a>
-
-    </div>
-</div>
-
+              
+ </div>
+              
+              
+      </div>
+   
+ 
     <!-- Queries -->
+    
 
- <div style="margin: auto; width: auto;" >
-      <h6 class="docs-header" style="text-align: left;">Resume</h6><br /> 
 
-      <p style="text-align: left;"><b>Education</b></p><br /> 
+ <div style="margin: auto; text-align: center;" >
+      <h6 class="resume_title">Resume</h6>
 
-      <p style="text-align: left; font-size:16px;"><span>Cranbrook Academy of Art- MFA (Painting)</span><br /> Bloomfield Hills, MI Elective in 2D Design Department.<br /> Spring semester 1999<br /> 9/98-5/00
+   <h6 class="sub-header">Education</h6>
+ <p style="text-align: center;">
+      <p style="text-align: center;"><span>Cranbrook Academy of Art- MFA (Painting)</span><br /> Bloomfield Hills, MI Elective in 2D Design Department.<br /> Spring semester 1999<br /> 9/98-5/00
       </p>
-<br/>
-         <p style="text-align: left; font-size:16px;"><span>East Stroudsburg University - Ed.D (Expected Graduation : December 2022)</span><br /> East Stroudsburg, PA <br>9/2018-5/2022
+
+         <p style="text-align: center;"><span>East Stroudsburg University - Ed.D </span><br /> East Stroudsburg, PA <br>9/2018-5/2022
       </p>
-<br/>
-      <p style="text-align: left; font-size:16px;"><span>Montclair State University- BA &#8211; Studio Art (Painting/Filmmaking)</span><br /> Upper Montclair, NJ<br /> 9/92-1/96
+
+      <p style="text-align: center;"><span>Montclair State University- BA &#8211; Studio Art (Painting/Filmmaking)</span><br /> Upper Montclair, NJ<br /> 9/92-1/96
       </p><br/><br/>
-      <p style="text-align: left;"><b>Exhibitions</b></p><br /> 
+      <p style="text-align: center;">
+   </p><br /> 
 
    </div> 
       
-            <p>
-          <div style="margin: auto; width: auto; font-size:16px;" >
-     <span style="font-weight:600;";> INTERSTATE: Where I-90 Meets I-82  </span><br>
+    <div class="hr-main"></div>        
+          <div style="margin: auto; width: auto; text-align: center;" >
+            <h6 class="sub-header">Exhibitions</h6>
+   
+        <p> <span style="text-align: center;">INTERSTATE: Where I-90 Meets I-82  </span><br>
 Sarah Spurgeon Gallery<br>
 Central Washington University<br>
 400 E. University Way<br>
          Ellensburg, WA 98926<br>
           2022 <br>
               Juried Exhibition
-              Gallery Lecture clip: <a href="https://ndangelo.com/interstate_clip.html" target="_blank">https://ndangelo.com/interstate_clip.html</a>
-<br>
-              One-hour gallery tour: <a href="https://ndangelo.com/interstate.html" target="_blank">https://ndangelo.com/interstate.html</a>
+              Gallery Lecture clip: <a class="lin" href="https://ndangelo.com/interstate_clip.html" target="_blank">https://ndangelo.com/interstate_clip.html</a>
+             <p> One-hour gallery tour: <a class="lin" href="https://ndangelo.com/interstate.html" target="_blank">https://ndangelo.com/interstate.html</a></p>
 
-           </p><br>
+           </p>
       
-               <div style="margin: auto; width: auto; font-size:16px;">
-     <span style="font-weight:600;";> Lost and Found Show</span><br>
+               <div style="margin: auto; width: auto;">
+    <span style="text-align: center;">Lost and Found Show</span><br>
 	Core New Art Space<br>
 	6851 West Colfax Avenue<br>
 Lakewood, CO, 80214<br>
 2022
+           
+           </p>
+      <br>
+         <div style="margin: auto; width: auto;" >
+   <p> <span style="text-align: center;">Luminosity: The Cultural Center of Cape Cod Juried Exhibition (2021) </span><br>
+	307 Old Main St, South Yarmouth, MA 02664<br>
+	Work was exhibited in the Juried Show: Luminosity<br>
+       <a class="lin" href="https://www.cultural-center.org/luminosity">Luminosity Homepage</a>
+       2021
            <br>
            </p>
       <br>
-         <div style="margin: auto; width: auto; font-size:16px;" >
-     <span style="font-weight:600;";> Luminosity: The Cultural Center of Cape Cod Juried Exhibition (2021) </span><br>
-	307 Old Main St, South Yarmouth, MA 02664<br>
-	Work was exhibited in the Juried Show: Luminosity<br>
-       <a href="https://www.cultural-center.org/luminosity">Luminosity Homepage</a><br>
-       2021
-           <br>
-           </p><br>
       
-      
-   <p style="font-size:16px;"> 
-<span style="font-weight:600;">The MacGuffin: Literary Magazine  </span>
+   <div style="margin: auto; width: auto;" >
+<p> <span style="text-align: center;">The MacGuffin: Literary Magazine </span> <br>
 	The MacGuffin Volume 36 No. 3. <br>
        The journal was published after a delay in<br>
 	printing due to the Covid-19 pandemic.  <br>
      2020
-           </p><br>
-
-       <p style="font-size:16px;">
-<span style="font-weight:600;">Cape Fear Studios 10th National 2D Competition and Exhibit (2020)</span><br>
+           </p>
+<br>
+       <p><span style="text-align: center;">
+Cape Fear Studios 10th National 2D Competition and Exhibit (2020)</span><br>
 148-1 Maxwell Street,
   <br>Fayetteville, North Carolina<br>
 Took part in a juried collection of work from artists all over the United States.<br>
@@ -583,8 +317,8 @@ Took part in a juried collection of work from artists all over the United States
            </p><br>
 
       </p>
-    <p style="font-size:16px;">
-<span>Creative Quarterly Website</span><br />
+    <p>
+<span style="text-align: center;">Creative Quarterly Website</span><br />
 Issue #57<br />
 Fine Art Category<br /> 
 2020<br /> 
@@ -593,7 +327,7 @@ Fine Art Category<br />
 </p><br /> 
       
       
-      <p style="font-size:16px;">
+      <p>
         
 <span>Aleola Journal of Poetry and Art</span><br />
 Issue #4<br />
@@ -603,8 +337,8 @@ Contribution: Artwork<br />
 
 </p><br /> 
       
-  <div style="font-size:16px;">    
-<p style="font-size:16px;">
+  <div>    
+<p>
         
 <span>Torpedoes Away</span><br />
 ISBN #: 978-1-63275-091-4<br />
@@ -615,7 +349,7 @@ Harborton, VA<br />
 
 </p><br /> 
       
-      <p style="font-size:16px;">
+      <p>
         
 <span>Creative Quarterly Website</span><br />
 Issue #42<br />
@@ -625,7 +359,7 @@ Fine Art Category<br />
 </p><br /> 
       
       
-<p style="font-size:16px;">
+<p>
  <span>Creative Quarterly Website</span><br />
 Issue #42<br />
    Fine Art Category<br />       
@@ -633,7 +367,7 @@ Issue #42<br />
 
 </p>
       
-      <p style="font-size:16px;">
+      <p>
         <br />  <span>Crooked Tree Arts Center</span><br /> 
         461 E. Mitchell <br /> 
         3446 N Albany<br /> 
@@ -644,7 +378,7 @@ Issue #42<br />
       <br/>
 
       
-    <p style="font-size:16px;"><a href="http://www.thearthouse.us/news-publications/2015/4/16/art-by-america-2015-selected-artists" target="_blank"><span>Art by America: A Review of 2-Dimensional Contemporary Art</span></a>
+    <p><a class="lin" href="http://www.thearthouse.us/news-publications/2015/4/16/art-by-america-2015-selected-artists" target="_blank"><span>Art by America: A Review of 2-Dimensional Contemporary Art</span></a>
 
         <br /><span> The Art House </span><br /> 
       3453 N Albany <br /> 
@@ -656,76 +390,82 @@ Issue #42<br />
       2015
       </p><br/>
       
-      <p style="text-align: left; font-size:16px;"><span>Crooked Tree Arts Center 2014 Juried Fine Arts Exhibition</span><br /> Crooked Tree Arts Center<br /> 461 E. Mitchell<br /> Petoskey, MI 49770<br /> Jersey City, NJ<br /> 2014
+      <p style="text-align: center;"><span>Crooked Tree Arts Center 2014 Juried Fine Arts Exhibition</span><br /> Crooked Tree Arts Center<br /> 461 E. Mitchell<br /> Petoskey, MI 49770<br /> Jersey City, NJ<br /> 2014
       </p><br/>
-      <p style="text-align: left; font-size:16px;"><span>2012 International Art Festival</span><br /> Museum of Russian Art<br /> Jersey City, NJ<br /> 2012
+      <p style="text-align: center;"><span>2012 International Art Festival</span><br /> Museum of Russian Art<br /> Jersey City, NJ<br /> 2012
       </p><br/>
-      <p style="text-align: left; font-size:16px;"><span>Small Works</span><br /> Detroit Contemporary<br /> Detroit, Michigan<br /> 2004
+      <p style="text-align: center; "><span>Small Works</span><br /> Detroit Contemporary<br /> Detroit, Michigan<br /> 2004
       </p><br/>
-      <p style="text-align: left; font-size:16px;">
+      <p style="text-align: center;">
         <span>Eclectic Collection of Short Films</span><br /> Pierro Gallery<br /> South Orange, NJ<br /> 2002
       </p><br/>
-      <p style="text-align: left; font-size:16px;"><span>Individual Deconstruction, Video/Art/Music festival</span><br /> Ypsilani, MI<br /> 2002
+      <p style="text-align: center; "><span>Individual Deconstruction, Video/Art/Music festival</span><br /> Ypsilani, MI<br /> 2002
       </p><br/>
       <div>
-        <p style="text-align: left; font-size:16px;"><span>Unbecoming</span><br /> Soil Gallery Seattle, WA<br />
-          <a href="http://community.seattletimes.nwsource.com/archive/?date=20010622&amp;slug=visart22" target="_blank">Review:</a> <br /> 06-01
+        <p style="text-align: center;"><span>Unbecoming</span><br /> Soil Gallery Seattle, WA<br />
+          <a class="lin" href="http://community.seattletimes.nwsource.com/archive/?date=20010622&amp;slug=visart22" target="_blank">Review:</a> <br /> 06-01
         </p><br/>
       </div>
-      <p style="text-align: left; font-size:16px;"><span>Individual Deconstruction</span><br /> Ypsilani, MI<br /> Video/Art/Music festival<br /> 04-01
+      <p style="text-align: center;"><span>Individual Deconstruction</span><br /> Ypsilani, MI<br /> Video/Art/Music festival<br /> 04-01
       </p><br/>
-      <p style="text-align: left; font-size:16px;"><span>www.waxdetroit.com and www.cranbrookdesign.com</span><br /> Featured on both websites.<br /> 4/00
+      <p style="text-align: center; "><span>www.waxdetroit.com and www.cranbrookdesign.com</span><br /> Featured on both websites.<br /> 4/00
       </p><br/>
-      <p style="text-align: left; font-size:16px;"><span>D&amp;B&amp;B (D&#8217;Arcy)</span><br /> Annual Collection<br /> Troy, MI<br /> 05-00 Present</p><br/>
-      <p style="text-align: left; font-size:16px;"><span>Cranbrook Academy of Art Degree Show</span><br /> Cranbrook Art Museum Bloomfield Hills, MI<br /> 4/00-5/12/00
+      <p style="text-align: center;"><span>D&amp;B&amp;B (D&#8217;Arcy)</span><br /> Annual Collection<br /> Troy, MI<br /> 05-00 Present</p><br/>
+      <p style="text-align: center;"><span>Cranbrook Academy of Art Degree Show</span><br /> Cranbrook Art Museum Bloomfield Hills, MI<br /> 4/00-5/12/00
       </p><br/>
-      <p style="text-align: left; font-size:16px;"><span>City Without Walls, 23rd Annual New Members Show</span><br /> One Gateway Center,<br /> Street Level Newark, NJ 07102-1188 9/98-10/98</p><br/>
-      <p style="text-align: left; font-size:16px;"><span>Jersey City Studio Tour</span><br /> Jersey City, NJ<br /> 9/97
+      <p style="text-align: center;"><span>City Without Walls, 23rd Annual New Members Show</span><br /> One Gateway Center,<br /> Street Level Newark, NJ 07102-1188 9/98-10/98</p><br/>
+      <p style="text-align: center;"><span>Jersey City Studio Tour</span><br /> Jersey City, NJ<br /> 9/97
       </p><br/>
-      <p style="text-align: left; font-size:16px;"><span>Symbolic Interpretations</span><br /> Montclair State University<br /> Calcia Fine Arts Building<br />Gallery 3 1/2<br /> 9/96-10/96
+      <p style="text-align: center;"><span>Symbolic Interpretations</span><br /> Montclair State University<br /> Calcia Fine Arts Building<br />Gallery 3 1/2<br /> 9/96-10/96
       </p><br/>
-      <p style="text-align: left; font-size:16px;" name="contact"><span>NJ Third Biannual Student and Alumni Exhibition</span><br /> Westbeth Gallery, New York, NY</p>
+<span id="contact"></span>
+      <p style="text-align: center;" name="contact"><span>NJ Third Biannual Student and Alumni Exhibition</span><br /> Westbeth Gallery, New York, NY</p>
+<span id="contact"></span>
       <br /><br />
-      <a ></a>
+     
     </div>
   </div>
+
+
+<div class="hr-standard"></div>
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<a id="contact"></a>
+
     <div align="center" style="font-size:16px;">
       <!-- Forms -->
-      <img src="https://s3.amazonaws.com/image-control-storage/contact_me.jpg" width="319px">
-
+      <img src="https://s3.amazonaws.com/image-control-storage/contact_me.jpg" width="319px" style=" max-width: 300px;">
+      <span id="bio"></span><br><br>
     </div>
       
-    <a id="bio"></a>
+    
 
     <!-- Queries -->
- <div style="margin: auto; width: auto;" >
+
+ <div style="margin: auto; width: auto;" >    
     <div class="docs-section">
-      <h6 class="docs-header" style="text-align: left;">BIO</h6>
-      <p style="font-size:16px;">I am an Assistant Professor in the Digital Media Technologies Department at East Stroudsburg University in East Stroudsburg, PA. I specialize in Social Media, Digital Marketing, Website Design and Online Coding. I hold an M.F.A. from Cranbrook Academy of Art with a concentration in 2d Design and Painting and B.A. in filmmaking and painting from Montclair State University. I have held positions at a variety of digital advertising firms, including Digitas, where I was an Associate Creative Director, working on pharmaceutical advertising and websites for General Motors. I also held the position of Senior Production Artist at Organic Inc., working on multimedia production for Daimler Chrysler’s many automotive brands, and was Lead Designer at J. Walter Thompson, designing the Ford family of websites. </p><br>
-<p style="font-size:16px;">In addition to my current position at East Stroudsburg University, I have taught Website Production, Design, and Digital Art at Caldwell University, as well as lectured in the B.F.A Program at Montclair State University.
+ <h6 class="bio_title">BIO</h6>
+      <p>I am an Assistant Professor in the Digital Media Technologies Department at East Stroudsburg University in East Stroudsburg, PA. I specialize in Social Media, Digital Marketing, Website Design and Online Coding. I hold an M.F.A. from Cranbrook Academy of Art with a concentration in 2d Design and Painting and B.A. in filmmaking and painting from Montclair State University. I have held positions at a variety of digital advertising firms, including Digitas, where I was an Associate Creative Director, working on pharmaceutical advertising and websites for General Motors. I also held the position of Senior Production Artist at Organic Inc., working on multimedia production for Daimler Chrysler’s many automotive brands, and was Lead Designer at J. Walter Thompson, designing the Ford family of websites. </p> <span id="press"></span>
+<p>In addition to my current position at East Stroudsburg University, I have taught Website Production, Design, and Digital Art at Caldwell University, as well as lectured in the B.F.A Program at Montclair State University.
 I currently reside in West Orange, NJ.</p>
 
-
+  <span id="press"></span>
     </div>
-
-
-
+ 
+  <h6 class="press_title">Press</h6>
       <div style="width: 100%; width: auto; text-align: center;">
 
-        <img src="https://s3.amazonaws.com/image-control-storage/tina_apartment_my_painting.jpg" alt="" title="Tina Glengary / Creative Strategist" />
+        <img src="https://s3.amazonaws.com/image-control-storage/tina_apartment_my_painting.jpg" alt="" title="Tina Glengary / Creative Strategist" style="max-width:600px;"/>
+        
       </div>
 
-      <a id="press"></a>
+      
 
-      <h6 class="docs-header" style="text-align: left;">Press</h6>
+    
 
-      <p style="text-align: left;"><span class="sub" style="font-size:16px;">Translation of the above picture.</span><br/><br/>
-<div style="font-size:16px;">
+      <p><span>Translation of the above picture.</span><br/><br/>
+
 New York
 <br/><br/>
 Set up by a computer, the quirky wonder of a detailed arrangement.
@@ -740,58 +480,49 @@ design was simulated by a computer. <br />As a result, a wonderful and orderly l
 <br />Whether it is paintings,
 bear artwork, or a lot of figurines, it is perfectly cute, tasteful and original.
 <br/><br/>
-<strong>1.</strong> Living Room. The pink painting is by an artist friend, Nick D'Angelo.<br/>
-<strong>2.</strong> Tina and her (love) dog Claire.<br/>
-<strong>3.</strong> Chinese-made antique where small items are placed, and if you look closer <br />you will see that it's placed on its side.<br/>
-<strong>4.</strong> From the music room, through the living room, the book shelves are in a row. <br />Bear artwork found on the net, created by 
+1. Living Room. The pink painting is by an artist friend, Nick D'Angelo.<br/>
+2. Tina and her (love) dog Claire.<br/>
+3. Chinese-made antique where small items are placed, and if you look closer <br />you will see that it's placed on its side.<br/>
+4. From the music room, through the living room, the book shelves are in a row. <br />Bear artwork found on the net, created by 
 a craft designer called Gaia.<br/>
-<strong>5.</strong> Both of them like to collect children's toys, <br />>and the collection is placed in a row.<br/><br/>
+5. Both of them like to collect children's toys, <br />and the collection is placed in a row.<br/><br/>
 
-    [ translation by <a target="_blank" href="http://www.dominiquemao.com/indexhibit/">Dominique Mao</a>.]
+     Translation by <a href="http://www.dominiquemao.com/indexhibit/" target="_blank">Dominique Mao</a>
     <br/><br/><strong>Picture above: </strong>A page from "Anan Magazine"</p>
   
-          </div>
+         
       
 </div>
-  </div>
 
+ </section>
 
+     <div id="socialnew">
+       <ul style="margin-right: 50px;">
+     <li>  <a class="fa fa-facebook-square" href="#" ></a></li>
+			<li><a class="fa fa-envira" href="#" ></a></li>
+		<li>	<a class="fa fa-github" href="#" ></a></li>
+		<li>	<a class="fa fa-linkedin" href="#" ></a></li>
+		<li>	<a class="fa fa-css3" href="#" ></a></li>
+    <li>  <a class="fa fa-codepen" href="#" ></a></li>
 </div>
+
+
 <!-- Footer -->
-
-<span class="navbar-spacer-footer"></span><br />
-
-        <div class="grid" align="center">
-
-
-          <div class="twelve columns" >
-
-            <div class="row" style="width:auto; margin: auto;">
-
-
-
-           
-     <div id="social"><a class="facebookBtn smGlobalBtn" href="#" ></a>
-			<a class="twitterBtn smGlobalBtn" href="#" ></a>
-			<a class="googleplusBtn smGlobalBtn" href="#" ></a>
-			<a class="linkedinBtn smGlobalBtn" href="#" ></a>
-			<a class="pinterestBtn smGlobalBtn" href="#" ></a>
-
-
-  
-          
-<br /><br />
-            
-<div style="float: left; height: 50px; width:200px; text-align: center; font-size:13px; color:#cccccc;">
- <a href="//www.dmca.com/Protection/Status.aspx?ID=1c810f9e-1a07-4a4b-ab59-9d05b0644f6c" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=1c810f9e-1a07-4a4b-ab59-9d05b0644f6c"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script><br>             
+               <br>                                   
+<div style="width:200px; text-align: center; font-size:13px; color:#cccccc; margin: auto;">
+ <a href="//www.dmca.com/Protection/Status.aspx?ID=1c810f9e-1a07-4a4b-ab59-9d05b0644f6c" title="DMCA.com Protection Status"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=1c810f9e-1a07-4a4b-ab59-9d05b0644f6c" alt="DMCA.com Protection Status" style="width:120px;"src="https/images.dmca.com/Badges/DMCABadgeHelper.min.js"></a> </script>            
               
-© 2010-2022 Nicholas D'Angelo. Unauthorized use and/or duplication of this websites material without express and written permission from this websites author and/or owner is strictly prohibited.</div>
+<footer> © 2010-2023 Nicholas D'Angelo. Unauthorized use and/or duplication of this websites material without express and written permission from this websites author and/or owner is strictly prohibited.</footer>
 
 
-</div>
+
          		</div> 
-        </div>
+        
 <br /><br /><br />
-</body>
 
+	</div> 	</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script><script  src="js/script.js"></script>
+
+</body>
 </html>
