@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
+
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
@@ -7,22 +9,31 @@
 }
 
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mulish', sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
- font-family: 'Montserrat', sans-serif;
+ font-family: 'Mulish', sans-serif;
   font-size: 1rem;
   margin: 0;
   background: #fff;
   color: #222;
 }
 
+h1
+{
+ font-family: 'Mulish', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  background: #fff;
+  color: #222;
+}
+
 a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mulish', sans-serif;
   color: #e78d00;
   font-size: 1rem;
   font-weight: 400;
@@ -39,7 +50,7 @@ a {
 }
 
 a.lin {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mulish', sans-serif;
   color: #e78d00;
   font-size: 1rem;
 
@@ -119,7 +130,7 @@ form {
 }
 
 footer {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-color: #292929;
   border-top: 1px solid #e2e2e2;
 }
@@ -254,7 +265,7 @@ input[type=submit] {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-size: 1rem;
   margin: 0;
   background: #fff;
@@ -286,10 +297,12 @@ body {
 }
 
 .work-title {
+  font-family: Mulish, sans-serif;
   color: #999999;
   font-size: .8rem;
   letter-spacing: .05rem;
   font-weight: 400; 
+  font-style: italic;
 }
 
 
@@ -318,7 +331,7 @@ p {
 }
 
 .toplogo1 {
- font-family: 'Montserrat', sans-serif;
+ font-family: 'Mulish', sans-serif;
   color: #f09f1f;
   font-size: 2.2rem;
   font-weight: 400;
@@ -328,7 +341,7 @@ p {
 }
 
 .toplogo2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mulish', sans-serif;
    color: #79b2d4;
     font-size: 2.2rem;
   font-weight: 500;
@@ -427,6 +440,6 @@ a.fa:hover {
 
 
 span {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Mulish, sans-serif;
   color: #79b2d4;
 }
