@@ -26,17 +26,53 @@ body{margin:0;background:#fff;color:var(--text);font-family: "Montserrat", sans-
 a{color:var(--orange);text-decoration:none}
 a:hover{text-decoration:underline}
 .site{max-width:1280px;margin:0 auto;padding:0 26px}
-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--line)
+}
+
 .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-<<<<<<< HEAD
-.logo{font-size:2.05rem;font-weight:300;letter-spacing:-.06em;white-space:nowrap}
-.logo .first{color:var(--orange)} .logo .last{color:var(--blue);font-weight:500}
-=======
-.logo{font-size:2.05rem;font-weight:400;letter-spacing:-.06em;white-space:nowrap}
-.logo .first{color:var(--orange)} .logo .last{color:var(--blue);font-weight:300}
->>>>>>> 27a21a5f8ab3a7db617a20b02ae87166af79b7c2
-nav a{display:inline-block;color:#8b8b8b;font-size:.86rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 7px}
-nav a:hover{color:#222}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:12px;
+  font-weight:400;
+  letter-spacing:0;
+  white-space:nowrap;
+}
+
+.logo .first{
+  color:#f09f1f;
+}
+
+.logo .last{
+  color:#79b2d4;
+  font-weight:400;
+}
+
+nav a{
+  display:inline-block;
+  color:#999;
+  font-size:12px;
+  text-transform:none;
+  letter-spacing:0;
+  padding:0 6px;
+}
+
+nav a:hover{
+  color:#222;
+}
+
 .hero{padding:58px 0 28px}
 .hero img{display:block;width:min(880px,100%);max-height:780px;object-fit:contain;margin:0 auto}
 .hero-meta{width:min(880px,100%);margin:10px auto 0;display:flex;justify-content:space-between;gap:20px;font-size:.82rem;color:var(--gray)}
