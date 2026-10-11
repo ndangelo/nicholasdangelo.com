@@ -42,6 +42,8 @@ a:hover{text-decoration:underline}
     color: var(--orange);
 }
 
+
+
 header{
   position:sticky;
   top:0;
@@ -89,8 +91,16 @@ nav a:hover{
   color:#222;
 }
 
+.hero img{
+    display:block;
+    width:880px;
+    max-width:100%;
+    height:auto;
+    margin:0 auto;
+}
+
 .hero{padding:58px 0 28px}
-.hero img{display:block;width:min(880px,100%);max-height:780px;object-fit:contain;margin:0 auto}
+/*.hero img{display:block;width:min(880px,100%);max-height:780px;object-fit:contain;margin:0 auto}*/
 .hero-meta{width:min(880px,100%);margin:10px auto 0;display:flex;justify-content:space-between;gap:20px;font-size:.82rem;color:var(--gray)}
 .hero-meta span:first-child{color:var(--orange)}
 .intro{max-width:850px;margin:26px auto 62px;text-align:center}
@@ -150,7 +160,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 60px;text-align:center;co
   <section class="hero" aria-label="Featured work">
     <img src="https://raw.githubusercontent.com/ndangelo/nicholasdangelo.com/main/images/NicholasDAngelo_Over_2025.jpg" alt="Over — Nicholas D’Angelo">
 
-<div class="work-caption">
+<div class="hero-meta">
     <span>Over</span>
     <span>16" × 16" × 1" · Digital Print</span>
 </div>
