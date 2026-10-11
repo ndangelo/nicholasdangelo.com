@@ -28,10 +28,18 @@ a:hover{text-decoration:underline}
 .site{max-width:1280px;margin:0 auto;padding:0 26px}
 
 .work-caption {
-    width: 100%;
+    width: min(880px, 100%);
+    margin: 10px auto 0;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    font-size: 0.82rem;
+    color: var(--gray);
     box-sizing: border-box;
+}
+
+.work-caption span:first-child {
+    color: var(--orange);
 }
 
 header{
