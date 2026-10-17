@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nicholas D'Angelo — Artist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --orange:#f09f1f;
+  --orange-dark:#ba3e01;
+  --blue:#79b2d4;
+  --blue-dark:#59a2ce;
+  --text:#222;
+  --gray:#999;
+  --line:#ccc;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--text);font-family: "Montserrat", sans-serif;;font-size:17px;line-height:1.65}
+a{color:var(--orange);text-decoration:none}
+a:hover{text-decoration:underline}
+.site{max-width:1280px;margin:0 auto;padding:0 26px}
+
+.work-caption {
+    width: min(880px, 100%);
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 0.82rem;
+    color: var(--gray);
+    box-sizing: border-box;
+}
+
+.work-caption span:first-child {
+    color: var(--orange);
+}
+
+
+
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--line);
+  padding:30px;
+}
+
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:400;
+  letter-spacing:0;
+  white-space:nowrap;
+}
+
+.logo .first{
+  color:#f09f1f;
+}
+
+.logo .last{
+  color:#79b2d4;
+  font-weight:400;
+}
+
+nav a{
+  display:inline-block;
+  color:#999;
+  font-size:12px;
+  text-transform:none;
+  letter-spacing:0;
+  padding:0 6px;
+}
+
+nav a:hover{
+  color:#222;
+}
+
+.hero img{
+    display:block;
+    width:880px;
+    max-width:100%;
+    height:auto;
+    margin:0 auto;
+}
+
+.hero{padding:58px 0 28px}
+/*.hero img{display:block;width:min(880px,100%);max-height:780px;object-fit:contain;margin:0 auto}*/
+.hero-meta{width:min(880px,100%);margin:10px auto 0;display:flex;justify-content:space-between;gap:20px;font-size:.82rem;color:var(--gray)}
+.hero-meta span:first-child{color:var(--orange)}
+.intro{max-width:850px;margin:26px auto 62px;text-align:center}
+.intro p{margin:0;color:var(--gray);font-size:1.12rem;line-height:1.75}
+.source-note{max-width:850px;margin:-24px auto 32px;text-align:center;color:var(--gray);font-size:.78rem}.section-title{width:80%;margin:0 auto 44px;padding:22px 10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;text-transform:uppercase;letter-spacing:.2rem;font-size:2.05rem;font-weight:300;color:var(--orange-dark)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:54px 34px}
+.work{margin:0}
+.work a{display:block;background:#fafafa}
+.work img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#fafafa;transition:opacity .25s ease}
+/*.work:hover img{opacity:.82}*/
+figcaption{padding:10px 2px 0;display:flex;flex-direction:column;gap:1px}
+figcaption span{color:var(--blue);font-size:1rem;font-style:italic;font-weight:500}
+figcaption small{color:var(--gray);font-size:.76rem;letter-spacing:.03em}
+.long-work img{aspect-ratio:5/3}
+section.info{padding:76px 0 0}
+.info p{max-width:820px;margin:0 auto 20px;color:var(--gray)}
+.exhibitions,.press{max-width:850px;margin:0 auto}
+.entry{padding:16px 0;border-bottom:1px solid #eee;color:var(--gray)}
+.entry strong{color:var(--blue);font-weight:500}
+.entry a{font-size:.9em}
+.contact{text-align:center;padding:80px 0}
+.contact a{font-size:1.05rem}
+footer{border-top:1px solid var(--line);padding:30px 0 60px;text-align:center;color:#bbb;font-size:.75rem}
+@media(max-width:800px){
+ body{font-size:16px}
+ /*.site{padding:0 18px}*/
+  .site {padding: 30px}
+ .nav{align-items:flex-start;padding:12px 0;flex-direction:column;gap:4px}
+ .logo{font-size:1.7rem}
+ nav{width:100%;display:flex;flex-wrap:wrap}
+ nav a{font-size:.76rem;padding:5px 8px 5px 0}
+ .hero{padding-top:28px}
+ .hero-meta{font-size:.73rem, padding:30px;}
+ .intro p{font-size:1rem}
+ .grid{grid-template-columns:1fr;gap:42px}
+ .section-title{width:100%;font-size:1.65rem}
+}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="site nav">
+    <div class="logo"><span class="first">nicholas</span>&nbsp;<span class="last">d'angelo</span></div>
+    <nav aria-label="Primary">
+      <a href="#work">work</a>
+      <a href="#exhibitions">exhibitions</a>
+      <a href="#press">press</a>
+      <a href="#about">about</a>
+      <a href="ndangelo_cv_artist_2026.pdf" target="_blank">cv</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="site">
+  <section class="hero" aria-label="Featured work">
+    <img src="https://raw.githubusercontent.com/ndangelo/nicholasdangelo.com/main/images/NicholasDAngelo_Over_2025.jpg" alt="Over — Nicholas D’Angelo">
+
+<div class="hero-meta">
+    <span>Over</span>
+    <span>16" × 16" × 1" · Digital Print</span>
+</div>
+    </section>
+
+  <section class="intro">
+    <p>I create work where action, speed of movement, and thought dominate the subject of my artwork. I document dynamic performances using various techniques to create source material for much of my work. The completed work is composed of a narrative that depicts motion in two-dimensional images.</p>
+  </section>
+
+  <section id="work">
+    <h1 class="section-title">selected work</h1>
+    <div class="grid">
+      <figure class="work">
+        <img src="images/the_color_of_action.png" alt="The Color of Action — Nicholas D’Angelo">
+        <figcaption><span>The Color of Action</span><small> </small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="images/around_we_go.png" alt="Around We Go — Nicholas D’Angelo">
+        <figcaption><span>Around We Go</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="images/self-portrait.png" alt="Self Portrait — Nicholas D’Angelo">
+        <figcaption><span>Self Portrait</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://raw.githubusercontent.com/ndangelo/nicholasdangelo.com/main/images/NicholasDAngelo_Brilliant_2025.jpg" alt="Brilliant — Nicholas D’Angelo">
+        <figcaption><span>Brilliant</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://raw.githubusercontent.com/ndangelo/nicholasdangelo.com/main/images/blue_blur.jpg" alt="Light and Self — Nicholas D’Angelo">
+        <figcaption><span>Light and Self</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://raw.githubusercontent.com/ndangelo/nicholasdangelo.com/main/images/blue_hug.jpg" alt="Blue Hug — Nicholas D’Angelo">
+        <figcaption><span>Blue Hug</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://raw.githubusercontent.com/ndangelo/nicholasdangelo.com/main/images/down_and_out.jpg" alt="Down and Out — Nicholas D’Angelo">
+        <figcaption><span>Down and Out</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://raw.githubusercontent.com/ndangelo/nicholasdangelo.com/main/images/NicholasDAngelo_Moving_Forward_2025.jpg" alt="Forward, Go! — Nicholas D’Angelo">
+        <figcaption><span>Forward, Go!</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://raw.githubusercontent.com/ndangelo/nicholasdangelo.com/main/images/double_2.jpg" alt="Falling — Nicholas D’Angelo">
+        <figcaption><span>Falling</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/now_we_plot_sm.jpg" alt="Now We Plot — Nicholas D’Angelo">
+        <figcaption><span>Now We Plot</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_on_fire.jpg" alt="On Fire — Nicholas D’Angelo">
+        <figcaption><span>On Fire</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://raw.githubusercontent.com/ndangelo/nicholasdangelo.com/main/images/confusion_sm.jpg" alt="Confusion — Nicholas D’Angelo">
+        <figcaption><span>Confusion</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://raw.githubusercontent.com/ndangelo/nicholasdangelo.com/main/images/hands_lg.jpg" alt="Red March — Nicholas D’Angelo">
+        <figcaption><span>Red March</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://raw.githubusercontent.com/ndangelo/nicholasdangelo.com/main/images/end_of_conversation_sm.jpg" alt="Red Marc — Nicholas D’Angelo">
+        <figcaption><span>Red March</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/thought.jpg" alt="Thought — Nicholas D’Angelo">
+        <figcaption><span>Thought</span><small></small></figcaption>
+      </figure>
+
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/strength_in_mystery_sm.jpg" alt="Strength — Nicholas D’Angelo">
+        <figcaption><span>Strength</span><small></small></figcaption>
+      </figure>
+
+
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/phantom.jpg" alt="Phantom — Nicholas D’Angelo">
+        <figcaption><span>Phantom</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/close_up_sm.jpg" alt="The Silent Anger — Nicholas D’Angelo">
+        <figcaption><span>The Silent Anger</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_rising.png" alt="Rising — Nicholas D’Angelo">
+        <figcaption><span>Rising</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Im_Here_Now_What.png" alt="I’m here now. What? — Nicholas D’Angelo">
+        <figcaption><span>I’m here now. What?</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Turning_Away_from_the_Unknown.png" alt="Turning Away from The Unknown — Nicholas D’Angelo">
+        <figcaption><span>Turning Away from The Unknown</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Why_are_You_Here.png" alt="Why are you Here — Nicholas D’Angelo">
+        <figcaption><span>Why are you Here</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangelo_Whos_Behind_Me_Whose_in_Front_of_Me.png" alt="Who’s Behind me? Who’s in Front of Me — Nicholas D’Angelo">
+        <figcaption><span>Who’s Behind me? Who’s in Front of Me</span><small></small></figcaption>
+      </figure>
+      <figure class="work">
+        <img src="https://image-control-storage.s3.amazonaws.com/pinhole/ndangeo_Im_an_Afterthought.png" alt="I’m an Afterthought — Nicholas D’Angelo">
+        <figcaption><span>I’m an Afterthought</span><small></small></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="exhibitions" class="info">
+    <h2 class="section-title">selected exhibitions</h2>
+    <div class="exhibitions">
+      <div class="entry"><strong>2026 — 10th Annual Center for Contemporary Arts National (CCAN) · <a href="https://www.manvshadow.com">view exhibition ↗</a></strong><br>Center for Contemporary Arts National (CCAN), Abilene, TX, October 10, 2026</div>
+    <div class="entry"><strong>2025 — 9th Annual CCAN</strong><br>Center for Contemporary Arts National Juried Art Exhibition, Abilene, TX · <a href="https://www.center-arts.com/exhibits-calendar/ccan-2025-call-for-entry" target="_blank">exhibition ↗</a> · <a href="https://www.abilenecac.org/exhibitions/ccan-exhibit" target="_blank">Abilene Cultural Affairs Council ↗</a> · <a href="https://artist.callforentry.org/festivals_unique_info.php?ID=15847" target="_blank">CaFÉ listing ↗</a></div>
+<div class="entry"><strong>2025 — Oops! Unfortunately...</strong><br>A Space Gallery, Brooklyn, NY · <a href="https://www.aspacegallery.net/oopsunfortunately" target="_blank">view exhibition ↗</a></div>
+      
+      <div class="entry"><strong>2025 — Aperture: Current Approaches to Photography!</strong><br>Artlink Contemporary Gallery, Fort Wayne, IN · July 31–August 24, 2025</div>
+      <div class="entry"><strong>2025 — ShadowBoxX Gallery</strong><br><em>Mirror Mirror</em> · <a href="https://www.manvshadow.com/nicholas-dangelo-shadowboxx-gallery" target="_blank">view exhibition ↗</a></div>
+      <div class="entry"><strong>2025 — Ethereal · <a href="https://www.glasgowgalleryofphotography.com">gallery ↗</a></strong><br>Glasgow Gallery of Photography, Glasgow, UK · October 3–31, 2025; two works included</div>
+      <div class="entry"><strong>2025 — Uncanny · <a href="https://kokomo.iu.edu">exhibition ↗</a></strong><br>IU Kokomo Art Gallery, Kokomo, IN · June 4–25, 2025</div>
+      <div class="entry"><strong>2025 — Unseen Forces · <a href="https://www.tmarigallery.com">gallery ↗</a></strong><br>T Mari Gallery, Chicago, IL · June 7–22, 2025</div>
+      <div class="entry"><strong>2025 — Wild at Heart and Weird on Top For David Lynch</strong><br>The Lab on Santa Fe, Denver, CO · April 11–June 7, 2025</div>
+      <div class="entry"><strong>2025 — fotofoto Gallery 20th National Show</strong><br>fotofoto Gallery · March 13–April 5, 2025; juror: Andreas Rentsch</div>
+      <div class="entry"><strong>2023 — INTERSTATE: Where I-90 Meets I-82 · <a href="https://ndangelo.com/interstate.html">gallery tour ↗</a></strong><br>Sarah Spurgeon Gallery, Central Washington University, Ellensburg, WA</div>
+      <div class="entry"><strong>2023 — 2023 CCM and ESU Faculty Exhibition</strong><br>Madelon Powers Gallery, East Stroudsburg University, East Stroudsburg, PA</div>
+      <div class="entry"><strong>2023 — 2023 CCM and ESU Faculty Exhibition</strong><br>CCM Gallery, County College of Morris, NJ</div>
+      <div class="entry"><strong>2022 — Blackout National Show</strong><br>Art on 30th / An Art to Market Community, San Diego, CA · October 2022</div>
+      <div class="entry"><strong>2022 — INTERSTATE: Where I-90 Meets I-82 · <a href="https://ndangelo.com/interstate.html">gallery tour ↗</a></strong><br>Sarah Spurgeon Gallery, Central Washington University, Ellensburg, WA</div>
+      <div class="entry"><strong>2021 — Lost and Found Show</strong><br>Core New Art Space, Lakewood, CO</div>
+      <div class="entry"><strong>2021 — Luminosity: The Cultural Center of Cape Cod Juried Exhibition · </strong><a href="https://app.entrythingy.com/calls/external/wild-at-heart-weird-on-top/" target="_blank">exhibition ↗</a><br>Cultural Center of Cape Cod, South Yarmouth, MA</div>
+      <div class="entry"><strong>2020 — Cape Fear Studios 10th National 2D Competition and Exhibit</strong><br>Cape Fear Studios, Fayetteville, NC</div>
+      <div class="entry"><strong>2020 — Creative Quarterly Website — Issue #57</strong><br>Online exhibition, Fine Art Category</div>
+      <div class="entry"><strong>2020 — Small Work – Big Talent</strong><br>Las Lagunas Gallery, Laguna Beach, CA</div>
+      <div class="entry"><strong>2017 — <em>Torpedoes Away</em></strong><br>Book of haiku and micro-poetry published by Prolific Press · <a href="https://prolificpress.com/bookstore/prolific-books-c-12/torpedoes-away-by-nicholas-dangelo-p-202.html" target="_blank">view book ↗</a></div>
+      <div class="entry"><strong>2016 — Creative Quarterly Website — Issue #42</strong><br>Online exhibition, Fine Art Category</div>
+      <div class="entry"><strong>2016 — NEXT Up Gallery National Show</strong><br>NEXT Up Gallery, Denver, CO</div>
+      <div class="entry"><strong>2015 — Art by America: A Review of 2-Dimensional Contemporary Art</strong><br>The Art House, Chicago, IL</div>
+      <div class="entry"><strong>2014 — Crooked Tree Arts Center Juried Fine Arts Exhibition</strong><br>Crooked Tree Arts Center, Petoskey, MI</div>
+      <div class="entry"><strong>2012 — 2012 International Art Festival</strong><br>Museum of Russian Art / International Art Festival, Jersey City, NJ</div>
+      <div class="entry"><strong>2012 — Eclectic Collection of Short Films at the Pierro Gallery</strong><br>Pierro Gallery, South Orange, NJ</div>
+      <div class="entry"><strong>2001 — Individual Deconstruction</strong><br>Music Festival, Ypsilanti, MI</div>
+      <div class="entry"><strong>2000 — Unbecoming · <a href="seattle_times_press_feature_with_article_fixed.pdf" target="_blank">Seattle Times review ↗</a></strong><br>Soil Art Gallery, Seattle, WA · Video/Performance Art; group exhibition</div>
+
+    </div>
+  </section>
+
+  <section id="press" class="info">
+    <h2 class="section-title">press + recognition</h2>
+    <div class="press">
+      <div class="entry"><strong>2025 — Fine Art Photography Awards</strong><br>Nominee, Professional Experimental category, for <em>The Fallen</em> · <a href="https://apis.fineartphotoawards.com/winners-gallery/fapa-2024-2025/professional/experimental/hm/21983" target="_blank">view award record ↗</a></div>
+      <div class="entry"><strong>2024 — Chromatic Awards</strong><br>Honorable Mention, Fine Art · <a href="https://chromaticawards.com/winners-gallery/chromatic-awards-2024/professional/fine-art/hm/6840" target="_blank">view award ↗</a></div>
+<div class="entry"><strong>2023 — Creative Quarterly, Issue #71</strong><br>Two works published in the Fine Art category · <a href="https://cqjournal.com/gallery/71/gallery" target="_blank">view online gallery ↗</a> · <a href="https://www.cqjournal.com/magazines/71" target="_blank">view issue details ↗</a></div>      <div class="entry"><strong>2020 — The MacGuffin</strong><br>Volume 36 No. 3</div>
+      <div class="entry"><strong>2020 — Aleola Journal of Poetry and Art</strong><br>Issue #4</div>
+      <div class="entry"><strong>2001 — The Seattle Times</strong><br>Sheila Farr, “Rethinking what's beautiful and beastly,” reviewing <em>Unbecoming</em></div>
+      <div class="entry"><strong>Circa 2000 — Anan Magazine</strong><br>Feature on Tina Glengary and Evan's Brooklyn apartment, featuring a painting by Nick D'Angelo</div>
+    </div>
+  </section>
+
+  <section id="about" class="info">
+    <h2 class="section-title">about</h2>
+    <div class="info p">
+      <p>Nicholas D’Angelo is an artist and photographer whose work explores action, movement, the body, and psychological states. Working across photography, performance, and digital processes, he creates ethereal images that exist between physical presence and abstraction.</p>
+      <p>D’Angelo earned a B.A. in Studio Art from Montclair State University and an M.F.A. in Painting and 2D Design from Cranbrook Academy of Art. His work has been exhibited nationally and internationally, including at Sarah Spurgeon Gallery, Soil Art Gallery, T Mari Gallery, IU Kokomo Art Gallery, and Glasgow Gallery of Photography.</p>
+    </div>
+  </section>
+
+    <section id="about" class="info">
+    <h2 class="section-title">Artist Statement</h2>
+    <div class="info p">
+<p>  My work explores action, movement, and emotional states through ethereal imagery and blurred motion, creating two-dimensional narratives that exist between perception and abstraction. Using my own body, gestures, and experiences as source material, I construct images that convey both physical energy and psychological tension. The resulting works suggest instability, transformation, and the fluid nature of memory and emotion, often occupying a space between recognition and ambiguity.
+</p><p>I am interested in how emotions can be difficult to define or interpret. Emotional experiences are layered, shifting, and influenced by memory, environment, and perception. Through soft focus, distortion, and motion, my work examines these unstable states and reflects the disorientation that can emerge from the speed and intensity of contemporary life. The blurred image becomes both a visual language and a metaphor for uncertainty, vulnerability, and the fragmentation of experience.
+
+</p>
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">contact</h2>
+    <a href="#">nick@nicksfriends.com</a><br>
+    <a href="ndangelo_cv_artist_2026.pdf" target="_blank">download CV ↗</a>
+  </section>
+</main>
+
+<footer>© 2026 Nicholas D’Angelo · All artwork and text © Nicholas D’Angelo</footer>
+</body>
+</html>
