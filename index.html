@@ -53,6 +53,21 @@ footer{border-top:1px solid var(--line);padding:28px 0 54px;text-align:center;co
 }
 @media(max-width:460px){.site{padding-inline:17px}.work,.work:nth-child(5n+1){grid-column:span 12}.intro{margin-block:45px 58px}.hero-meta{gap:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+/* Accessible full-screen artwork lightbox */
+.lightbox{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:56px 28px 42px;background:rgba(12,12,12,.96)}
+.lightbox.open{display:flex}
+.lightbox-image{display:block;max-width:100%;max-height:calc(100vh - 115px);width:auto;height:auto;object-fit:contain;background:transparent}
+.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font:inherit;line-height:1;border-radius:2px;padding:12px 15px}
+.lightbox-close{top:16px;right:18px;font-size:28px}
+.lightbox-prev{left:16px;top:50%;transform:translateY(-50%);font-size:28px}
+.lightbox-next{right:16px;top:50%;transform:translateY(-50%);font-size:28px}
+.lightbox-caption{position:absolute;left:20px;right:20px;bottom:12px;text-align:center;color:#ddd;font-size:13px}
+.lightbox button:hover{background:rgba(255,255,255,.24)}
+.lightbox button:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+body.lightbox-open{overflow:hidden}
+@media(max-width:600px){.lightbox{padding:58px 12px 48px}.lightbox-prev{left:5px}.lightbox-next{right:5px}.lightbox-prev,.lightbox-next{padding:10px;font-size:23px}.lightbox-image{max-height:calc(100vh - 125px)}}
+
 </style>
 </head>
 <body>
@@ -175,9 +190,76 @@ footer{border-top:1px solid var(--line);padding:28px 0 54px;text-align:center;co
   </section>
 </main>
 <footer>© 2026 Nicholas D’Angelo · All artwork and text © Nicholas D’Angelo</footer>
+
+<div class="lightbox" id="art-lightbox" role="dialog" aria-modal="true" aria-label="Artwork viewer" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Close artwork viewer">&times;</button>
+  <button class="lightbox-prev" type="button" aria-label="Previous artwork">&#8249;</button>
+  <img class="lightbox-image" alt="">
+  <button class="lightbox-next" type="button" aria-label="Next artwork">&#8250;</button>
+  <div class="lightbox-caption" aria-live="polite"></div>
+</div>
+
 <script>
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('#primary-nav');
 toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'menu −':'menu +';});
+
+/* Lightbox gallery: opens the original image without cropping it. */
+(() => {
+  const box = document.getElementById('art-lightbox');
+  const fullImage = box.querySelector('.lightbox-image');
+  const caption = box.querySelector('.lightbox-caption');
+  const closeButton = box.querySelector('.lightbox-close');
+  const prevButton = box.querySelector('.lightbox-prev');
+  const nextButton = box.querySelector('.lightbox-next');
+  const links = Array.from(document.querySelectorAll('#work .work a')).filter(link => link.querySelector('img'));
+  let currentIndex = 0;
+  let previousFocus = null;
+
+  function showImage(index) {
+    currentIndex = (index + links.length) % links.length;
+    const link = links[currentIndex];
+    const thumb = link.querySelector('img');
+    fullImage.src = link.href;
+    fullImage.alt = thumb.alt || '';
+    caption.textContent = (thumb.alt || '').replace(/\s*[—–-]\s*Nicholas D’Angelo\s*$/, '');
+    prevButton.hidden = links.length < 2;
+    nextButton.hidden = links.length < 2;
+  }
+  function openLightbox(index) {
+    previousFocus = document.activeElement;
+    showImage(index);
+    box.classList.add('open');
+    box.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    closeButton.focus();
+  }
+  function closeLightbox() {
+    box.classList.remove('open');
+    box.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+    fullImage.removeAttribute('src');
+    if (previousFocus && typeof previousFocus.focus === 'function') previousFocus.focus();
+  }
+  function nextImage(step) { showImage(currentIndex + step); }
+
+  links.forEach((link, index) => {
+    link.addEventListener('click', event => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+      event.preventDefault();
+      openLightbox(index);
+    });
+  });
+  closeButton.addEventListener('click', closeLightbox);
+  prevButton.addEventListener('click', () => nextImage(-1));
+  nextButton.addEventListener('click', () => nextImage(1));
+  box.addEventListener('click', event => { if (event.target === box) closeLightbox(); });
+  document.addEventListener('keydown', event => {
+    if (!box.classList.contains('open')) return;
+    if (event.key === 'Escape') closeLightbox();
+    if (event.key === 'ArrowLeft') nextImage(-1);
+    if (event.key === 'ArrowRight') nextImage(1);
+  });
+})();
 </script>
 </body>
 </html>
